@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
-import Landing from './Landing'
-import Calculators from './Calculators'
+import HomeTitles from './HomeTitles'
+import StartCompatibilityTest from './StartCompatibilityTest'
+import StartSituationTest from './StartSituationTest'
+import Tutorial from './Tutorial'
+import Characters from './Characters'
+import styles from '../../styles/home/Home.module.css'
 
 export default function Home() {
   const [todos, setTodos] = useState(() => {
@@ -46,7 +50,20 @@ export default function Home() {
   }
 
   return <>
-  <Landing />
-  <Calculators />
+    <main>
+      <section className={ styles.titleContainer }>
+        <HomeTitles />
+      </section>
+      <section className={ styles.startQuizzes }>
+        <StartCompatibilityTest />
+        <StartSituationTest />
+      </section>
+      <article className= {styles.tutorial}>
+        <Tutorial />
+      </article>
+      <section className={ styles.charactersContainer }>
+        <Characters />
+      </section>
+    </main>
   </>
 }

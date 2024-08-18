@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import styles from '../../styles/home/SliderController.module.css'
+import styles from '../../styles/home/Home.module.css'
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
 export default function SliderController() {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState(5);
 
   const handleChange = (value) => {
     setValue(value);
@@ -25,16 +25,15 @@ export default function SliderController() {
 
   return (
     <>
-    <div className={styles.container}>
       <div className={styles.slider}>
       <Slider
-      defaultValue={1}
-      min={1}
+      defaultValue={5}
+      min={0}
       max={10} 
       value={value}
       // marks={marks}
       onChange={handleChange}
-      trackStyle={{ backgroundColor: "blue", height: 15 }}
+      trackStyle={{ backgroundColor: "#DEA5C5", height: 15 }}
       railStyle={{ backgroundColor: "#eae8e4", height: 15 }}
       handleStyle={{
         borderColor: "white",
@@ -47,8 +46,7 @@ export default function SliderController() {
       }}
       />
       </div>
-      <div>Value: {value}</div>
-    </div>
+      <div className= {styles.sliderValue }>{value}/10</div>
 
     </>
   );
