@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const rateLimiter = require('./middlewares/rateLimiter')
 
-router.get('/hello', (req, res) => {
+router.get('/hello', rateLimiter, (req, res) => {
     res.json({ message: 'Hello World!' });
 });
 
