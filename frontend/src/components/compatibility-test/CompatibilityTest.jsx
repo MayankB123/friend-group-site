@@ -1,13 +1,10 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
-import HomeTitles from './HomeTitles'
-import StartCompatibilityTest from './StartCompatibilityTest'
-import StartSituationTest from './StartSituationTest'
-import Tutorial from './Tutorial'
-import Characters from './Characters'
-import styles from '../../styles/Home.module.css'
+import CompatibilityTitles from './CompatibilityTitles'
+import CompatbilityForm from './CompatibilityForm'
+import styles from '../../styles/CompatibilityTest.module.css'
 
-export default function Home() {
+export default function CompatibilityTest() {
   const [todos, setTodos] = useState(() => {
     const localValue = localStorage.getItem("ITEMS")
     if (localValue == null) return []
@@ -51,17 +48,8 @@ export default function Home() {
 
   return <main>
       <section className={ styles.titleContainer }>
-        <HomeTitles />
+        <CompatibilityTitles />
       </section>
-      <section className={ styles.startQuizzes }>
-        <StartCompatibilityTest />
-        <StartSituationTest />
-      </section>
-      <article className= {styles.tutorial}>
-        <Tutorial />
-      </article>
-      <section className={ styles.charactersContainer }>
-        <Characters />
-      </section>
+      <CompatbilityForm />
     </main>
 }

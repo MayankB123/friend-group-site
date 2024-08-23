@@ -1,6 +1,9 @@
 :root {
-    --main-theme: #DEA5C5;
-    --button-color: #F9F9E0;
+    /* Main Pink: #DEA5C5
+    Other option: #7BD3EA*/
+    --main-theme: #ABCDEF;
+    --form-color: #F9F9E0;
+    --form-border: #FDFFC2;
     font-size: 62.5%;
 }
 
@@ -70,7 +73,7 @@ main {
     border-radius: 30px;
     width: 230px;
     font-size: 2rem;
-    background-color: var(--button-color);
+    background-color: var(--form-color);
 }
 
 .startQuizzes button:hover {
@@ -88,9 +91,9 @@ main {
     text-align: center;
     width: 40%;
     color: black;
-    border: 1px solid #FDFFC2;
+    border: 1px solid var(--form-border);
     border-radius: 30px;
-    background-color: var(--button-color);
+    background-color: var(--form-color);
 }
 
 .tutorial h1 {

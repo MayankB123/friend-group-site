@@ -1,0 +1,407 @@
+* {
+    font-family: "Exo 2", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: var(--main-theme);
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.form {
+    margin: 50px auto;
+    text-align: center;
+    width: 40%;
+    color: black;
+    border: 1px solid #FDFFC2;
+    border-radius: 30px;
+    background-color: var(--form-color);
+}
+
+.form h1 {
+    font-weight: 500;
+}
+
+.form h2 {
+    font-weight: 400;
+}
+
+.form h3 {
+    font-weight: 300;
+}
+
+.image {
+    object-fit: cover;
+    width: 180px;
+}
+
+.titleContainer {
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.titleContainer h1 {
+    font-size: 5rem;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.titleContainer h2 {
+    font-size: 2.5rem;
+    margin: 30px auto;
+    font-weight: 300;
+    width: 50%;
+}
+
+.startQuizzes {
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.startQuizzes button {
+    padding: 20px 25px;
+    border: none;
+    border-radius: 30px;
+    width: 230px;
+    font-size: 2rem;
+    background-color: var(--form-color);
+}
+
+.startQuizzes button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.startQuizzes button:active {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.tutorial {
+    margin: 50px auto;
+    text-align: center;
+    width: 40%;
+    color: black;
+    border: 1px solid #FDFFC2;
+    border-radius: 30px;
+    background-color: var(--form-color);
+}
+
+.tutorial h1 {
+    margin: 10px 0px;
+}
+
+.tutorial h2 {
+    margin: 15px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.tutorial h3 {
+    margin: 25px;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.slider {
+    height: 50px;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.sliderValue {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+.charactersContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .tutorial {
+        width: 45%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .tutorial {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .titleContainer h2 {
+        width: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+    .tutorial {
+        width: 70%;
+    }
+    
+    .startQuizzes {
+        width: 65%;
+    }
+}
+
+@media (max-width: 800px) {
+    .tutorial {
+        width: 70%;
+    }
+    
+    .startQuizzes {
+        width: 75%;
+    }
+
+    .image {
+        width: 160px;
+    }
+}
+
+@media (max-width: 700px) {
+    .tutorial {
+        width: 75%;
+    }
+    
+    .startQuizzes {
+        width: 80%;
+    }
+
+    .titleContainer h1 {
+        font-size: 4.5rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 2.3rem;
+    }
+
+    .image {
+        width: 140px;
+    }
+}
+
+@media (max-width: 650px) {
+    .startQuizzes button {
+        font-size: 1.8rem;
+        padding: 18px;
+        width: 200px;
+    }
+
+    .titleContainer h2 {
+        font-size: 2rem;
+    }
+
+    .tutorial h1 {
+        font-size: 2.2rem;
+    }
+
+    .tutorial h2 {
+        font-size: 1.8rem;
+    }
+
+    .tutorial h3 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .titleContainer h1 {
+        font-size: 4rem;
+    }
+
+    .image {
+        width: 130px;
+    }
+}
+
+@media (max-width: 550px) {
+    .titleContainer h1 {
+        font-size: 3.8rem;
+    }
+
+    .image {
+        width: 120px;
+    }
+
+    .startQuizzes button {
+        width: 180px;
+        font-size: 1.6rem;
+    }
+
+    .tutorial {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .sliderValue {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        width: 115px;
+    }
+
+    .titleContainer h2 {
+        width: 85%;
+    }
+
+    .startQuizzes button {
+        width: 160px;
+        font-size: 1.5rem;
+    }
+
+    .tutorial h1 {
+        font-size: 1.9rem;
+    }
+
+    .tutorial h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 470px) {
+    .titleContainer h1 {
+        font-size: 3.3rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 1.7rem;
+    }
+
+    .image {
+        width: 105px;
+    }
+
+    .startQuizzes button {
+        width: 160px;
+        font-size: 1.5rem;
+    }
+
+    .tutorial {
+        width: 85%;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .titleContainer h1 {
+        margin-top: 60px;
+        font-size: 3.1rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 1.6rem;
+    }
+
+    .image {
+        width: 95px;
+    }
+
+    .startQuizzes button {
+        width: 150px;
+        font-size: 1.35rem;
+    }
+
+    .tutorial {
+        width: 85%;
+    }
+}
+
+@media (max-width: 400px) {
+    .titleContainer h1 {
+        font-size: 3rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 1.6rem;
+    }
+
+    .image {
+        width: 90px;
+    }
+    
+    .startQuizzes {
+        width: 85%;
+    }
+
+    .tutorial {
+        width: 90%;
+    }
+
+    .tutorial h1 {
+        font-size: 1.8rem;
+    }
+
+    .tutorial h2 {
+        font-size: 1.4rem;
+    }
+
+    .tutorial h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 370px) {
+    .titleContainer h1 {
+        font-size: 2.7rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        width: 85px;
+    }
+
+    .startQuizzes button {
+        width: 140px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .titleContainer h1 {
+        margin-top: 80px;
+        font-size: 2.6rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        width: 80px;
+    }
+
+    .startQuizzes {
+        width: 92%;
+    }
+
+    .startQuizzes button {
+        width: 140px;
+        font-size: 1.2rem;
+    }
+
+    .tutorial h3 {
+        margin: 15px;
+    }
+}

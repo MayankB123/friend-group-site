@@ -1,5 +1,5 @@
 import { useState } from "react"
-import styles from '../../styles/test/Test.module.css'
+import styles from '../../styles/Test.module.css'
 
 export function NewTodoForm({ addTodo}) {
     const [newItem, setNewItem] = useState("")

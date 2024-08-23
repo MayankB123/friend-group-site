@@ -1,4 +1,4 @@
-import styles from '../../styles/test/Test.module.css';
+import styles from '../../styles/Test.module.css';
 
 export function TodoItem({ completed, id, title, toggleTodo, deleteTodo}) {
     return (

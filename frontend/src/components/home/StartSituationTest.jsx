@@ -1,10 +1,14 @@
-import { useState } from 'react'
-import { useEffect } from 'react'
-import styles from '../../styles/home/Home.module.css'
+import { useNavigate } from "react-router-dom"
 
 export default function StartSituationTest() {
 
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/situation-test');
+  };
+
   return <>
-        <button>Situation Test</button>
+        <button onClick={handleClick}>Situation Test</button>
     </>
 }

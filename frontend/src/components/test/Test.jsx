@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
-import styles from '../../styles/test/Test.module.css'
+import styles from '../../styles/Test.module.css'
 import { NewTodoForm } from './NewTodoForm'
 import { TodoList } from './TodoList'
 
