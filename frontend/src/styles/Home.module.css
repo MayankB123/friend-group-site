@@ -147,15 +147,15 @@ main {
     .titleContainer h2 {
         width: 70%;
     }
+
+    .startQuizzes {
+        width: 65%;
+    }
 }
 
 @media (max-width: 900px) {
     .tutorial {
         width: 70%;
-    }
-    
-    .startQuizzes {
-        width: 65%;
     }
 }
 

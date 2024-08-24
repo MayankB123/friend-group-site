@@ -1,55 +1,33 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
 import CompatibilityTitles from './CompatibilityTitles'
-import CompatbilityForm from './CompatibilityForm'
+import AddFriend from './AddFriend'
+import FriendForm from './FriendForm'
+import NoFriends from './NoFriends'
 import styles from '../../styles/CompatibilityTest.module.css'
 
 export default function CompatibilityTest() {
-  const [todos, setTodos] = useState(() => {
-    const localValue = localStorage.getItem("ITEMS")
-    if (localValue == null) return []
+  const [friendsCount, setFriendsCount] = useState(0)
 
-    return JSON.parse(localValue)
-  })
-
-  useEffect(() => {
-    localStorage.setItem("ITEMS", JSON.stringify(todos))
-  }, [todos])
-
-  function addTodo(newItem) {
-    setTodos((currentTodos) => {
-      return [
-        ...currentTodos, {
-          id: crypto.randomUUID(), 
-          title: newItem, 
-          completed: false
-        }
-      ]
-    })
+  function incrementFriendsCounter() {
+    if (friendsCount < 8) {
+      setFriendsCount(friendsCount + 1)
+    }
   }
+  
+  const friendsForms = []
 
-  function toggleTodo(id, completed) {
-    setTodos(currentTodos => {
-      return currentTodos.map(todo => {
-        if (todo.id === id) {
-          return { ...todo, completed} // Change state using state object instead
-        } else {
-          return todo
-        } 
-      })
-    })
-  }
-
-  function deleteTodo(id) {
-    setTodos(currentTodos => {
-      return currentTodos.filter(todo => todo.id !== id)
-    })
+  for (let i = 0; i < friendsCount; i++) {
+    friendsForms.push(<FriendForm key={i} />)
   }
 
   return <main>
       <section className={ styles.titleContainer }>
         <CompatibilityTitles />
       </section>
-      <CompatbilityForm />
+      <section className={ styles.friendForms }>
+        {friendsForms}
+        {friendsCount < 8 && <AddFriend onAddFriend={ incrementFriendsCounter } />}
+      </section>
     </main>
 }
