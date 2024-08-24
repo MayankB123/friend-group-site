@@ -53,4 +53,6 @@ module.exports = router;
     See what else to chuck in the email. See how you can actually do an email SMTP server, SendGrid, MailChimp etc?
     Don't give a score too low to people
 
+    Make sure you check that there aren't more than 8 friends.
+
 */

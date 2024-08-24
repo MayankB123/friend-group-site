@@ -19,6 +19,7 @@ main {
     text-align: center;
     width: 100%;
     height: 100%;
+    padding: 30px;
     color: black;
     border: 1px solid #FDFFC2;
     border-radius: 30px;
@@ -27,62 +28,54 @@ main {
 
 .form h1 {
     font-weight: 500;
+    font-size: 2.5rem;
+    margin: 0;
 }
 
 .form h2 {
     font-weight: 400;
+    font-size: 2rem;
+    margin: 10px 0px 0px 0px;
 }
 
 .form h3 {
+    font-weight: 400;
+    font-size: 1.9rem;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.form h4 {
     font-weight: 300;
+    font-size: 1.8rem;
+    margin: 10px 0 0 0;
+}
+
+.form h5 {
+    font-weight: 300;
+    font-size: 1.7rem;
+    margin: 15px 0 0 0;
+}
+
+.formWrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.ratingsText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .friendForms {
-    display: grid;
-    grid-template-columns: repeat(3, 500px);
-    grid-template-rows: repeat(3, 700px);
-    grid-gap: 20px;
-    justify-content: center;
-}
-
-.noFriends {
-    margin: 40px auto;
-    text-align: center;
-    width: 30%;
-    color: black;
-    border: 1px solid #FDFFC2;
-    border-radius: 30px;
-    background-color: var(--form-color);
-}
-
-.noFriends h1 {
-    font-weight: 400;
-}
-
-.addFriend:hover {
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.addFriend:active {
-    opacity: 0.5;
-    cursor: pointer;
-}
-
-.addFriendWrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-theme);
-}
-
-.addFriend {
-    width: 60px;
     align-items: center;
     justify-content: center;
-    border: none;
-    border-radius: 50%;
-    background-color: var(--form-color);
+    max-width: 1000px;
+    margin: 50px auto;
 }
 
 .image {
@@ -99,14 +92,71 @@ main {
     border-radius: 5px;
     outline: none;
     margin: 10px;
-    width: 50%; 
+    width: 35%; 
     box-sizing: border-box; 
     text-align: center;
   }
   
 .friendName::placeholder {
-color: #888;
-font-style: italic;
+    color: #888;
+    font-style: italic;
+}
+
+.error {
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 2rem;
+    color: white;
+    background-color: var(--error);
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
+
+.currentFriend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 0px;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--form-color);
+    color: black;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.currentFriendsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.currentFriend h1 {
+    font-size: 2.4rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.currentFriend h2 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin: 10px;
+}
+
+.deleteFriend {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    border-radius: 12px;
 }
 
 .titleContainer {
@@ -128,29 +178,50 @@ font-style: italic;
     width: 50%;
 }
 
-.startQuizzes {
-    margin: 40px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-}
-
-.startQuizzes button {
-    padding: 20px 25px;
+.submit {
+    margin-top: 20px;
+    padding: 15px 40px;
     border: none;
     border-radius: 30px;
-    width: 230px;
     font-size: 2rem;
-    background-color: var(--form-color);
+    background-color: var(--main-theme);
+    color: white;
 }
 
-.startQuizzes button:hover {
+.submit:hover {
     opacity: 0.8;
     cursor: pointer;
 }
 
-.startQuizzes button:active {
+.submit:active {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.getResultsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.getResults {
+    margin: 0 auto;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 2rem;
+    background-color: var(--form-color);
+    color: black;
+    margin-top: 40px;
+}
+
+.getResults:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.getResults:active {
     opacity: 0.5;
     cursor: pointer;
 }
@@ -185,7 +256,7 @@ font-style: italic;
     height: 50px;
     width: 70%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .sliderValue {

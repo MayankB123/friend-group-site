@@ -1,9 +1,10 @@
 :root {
     /* Main Pink: #DEA5C5
     Other option: #7BD3EA*/
-    --main-theme: #ABCDEF;
+    --main-theme: #DEA5C5;
     --form-color: #F9F9E0;
     --form-border: #FDFFC2;
+    --error: #FF0033;
     font-size: 62.5%;
 }
 
@@ -115,12 +116,12 @@ main {
 .slider {
     height: 50px;
     width: 70%;
-    margin: auto;
-    margin-top: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 .sliderValue {
-    margin: 0;
+    margin: 0 0 0px 0;
     font-size: 1.7rem;
     font-weight: 300;
 }

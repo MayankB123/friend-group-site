@@ -3,11 +3,9 @@ import styles from '../../styles/Home.module.css'
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
-export default function SliderController() {
-  const [value, setValue] = useState(5);
-
+export default function SliderController({ attribute, handleAttributeChange }) {
   const handleChange = (value) => {
-    setValue(value);
+    handleAttributeChange(value);
   };
 
   const marks = {
@@ -30,9 +28,9 @@ export default function SliderController() {
       defaultValue={5}
       min={0}
       max={10} 
-      value={value}
+      value={attribute}
       // marks={marks}
-      onChange={handleChange}
+      onChange={(handleChange)}
       trackStyle={{ backgroundColor: "#DEA5C5", height: 15 }}
       railStyle={{ backgroundColor: "#eae8e4", height: 15 }}
       handleStyle={{
@@ -46,7 +44,7 @@ export default function SliderController() {
       }}
       />
       </div>
-      <div className= {styles.sliderValue }>{value}/10</div>
+      <div className= { styles.sliderValue }>{attribute}/10</div>
 
     </>
   );
