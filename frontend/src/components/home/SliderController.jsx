@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/CompatibilityTest.module.css'
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 

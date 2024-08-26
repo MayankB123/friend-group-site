@@ -14,7 +14,7 @@ export default function Results() {
       <section className={ styles.titleContainer }>
         <ResultsTitles />
       </section>
-      <section className={ styles.mainResults }>
+      <section className={ styles.mainResultsWrapper }>
         <MainResults score={ score } text={ text } />
       </section>
       <section className={ styles.charactersContainer }>

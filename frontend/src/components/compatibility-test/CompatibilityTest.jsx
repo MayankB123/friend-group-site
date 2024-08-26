@@ -72,6 +72,7 @@ export default function CompatibilityTest() {
         <FriendForm addFriend={addFriend} handleError={ handleError } />
       </section>
       )}
+      {friends.length > 0 && (<h1 className={ styles.currentFriendsContainerTitle }>Your Friends</h1>)}
       <section className={ styles.currentFriendsContainer }>
       {friends.map(friend => {
         return <CurrentFriend {...friend} deleteFriend={deleteFriend} key={friend.id}/>

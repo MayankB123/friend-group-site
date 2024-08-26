@@ -125,13 +125,29 @@ main {
     color: black;
     text-align: center;
     border-radius: 30px;
+    overflow: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .currentFriendsContainer {
+    width: calc(90% - 80px);
+    box-sizing: border-box;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
     row-gap: 20px;
+    min-width: 0;
+    min-height: 0;
+}
+
+.currentFriendsContainerTitle {
+    font-size: 5rem;
+    margin: 20px 0;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px;
 }
 
 .currentFriend h1 {
@@ -144,6 +160,8 @@ main {
     font-weight: 300;
     font-size: 1.8rem;
     margin: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .deleteFriend {
@@ -271,21 +289,27 @@ main {
     justify-content: center;
 }
 
-@media (max-width: 1200px) {
-    .tutorial {
-        width: 45%;
+@media (max-width: 1150px) {
+    .form {
+        width: 90%;
     }
-}
 
-@media (max-width: 1100px) {
-    .tutorial {
-        width: 50%;
+    .currentFriendsContainer {
+        width: 90%;
     }
 }
 
 @media (max-width: 1000px) {
     .titleContainer h2 {
         width: 70%;
+    }
+
+    .slider {
+        width: 70%
+    }
+
+    .ratingsText {
+        width: 70%
     }
 }
 
@@ -296,6 +320,23 @@ main {
     
     .startQuizzes {
         width: 65%;
+    }
+
+    .slider {
+        width: 80%
+    }
+
+    .ratingsText {
+        width: 80%
+    }
+
+    .currentFriendsContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .error {
+        font-size: 1.5rem;
+        width: 30%;
     }
 }
 
@@ -311,6 +352,18 @@ main {
     .image {
         width: 160px;
     }
+
+    .slider {
+        width: 85%
+    }
+
+    .ratingsText {
+        width: 85%
+    }
+
+    .friendName {
+        width: 45%;
+    }
 }
 
 @media (max-width: 700px) {
@@ -325,6 +378,10 @@ main {
     .titleContainer h1 {
         font-size: 4.5rem;
     }
+
+    .currentFriendsContainerTitle h1 {
+        font-size: 4.5rem;
+    }
     
     .titleContainer h2 {
         font-size: 2.3rem;
@@ -332,6 +389,10 @@ main {
 
     .image {
         width: 140px;
+    }
+
+    .error {
+        font-size: 1.3rem;
     }
 }
 
@@ -357,6 +418,29 @@ main {
     .tutorial h3 {
         font-size: 1.7rem;
     }
+
+    .slider {
+        width: 90%
+    }
+
+    .ratingsText {
+        width: 90%
+    }
+
+    .form {
+        padding: 10px;
+    }
+
+    .friendName {
+        width: 55%;
+    }
+
+    .error {
+        font-size: 1.3rem;
+        width: 40%;
+    }
+
+    
 }
 
 @media (max-width: 600px) {
@@ -364,13 +448,25 @@ main {
         font-size: 4rem;
     }
 
+    .currentFriendsContainerTitle {
+        font-size: 4rem;
+    }
+
     .image {
         width: 130px;
+    }
+
+    .currentFriendsContainer {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 550px) {
     .titleContainer h1 {
+        font-size: 3.8rem;
+    }
+
+    .currentFriendsContainerTitle {
         font-size: 3.8rem;
     }
 
@@ -385,6 +481,10 @@ main {
 
     .tutorial {
         width: 80%;
+    }
+
+    .form h5 {
+        font-size: 1.5rem;
     }
 }
 
@@ -406,17 +506,46 @@ main {
         font-size: 1.5rem;
     }
 
-    .tutorial h1 {
+    .form h1 {
+        font-size: 2.3rem;
+    }
+
+    .form h2 {
+        font-weight: 400;
         font-size: 1.9rem;
     }
 
-    .tutorial h2 {
+    .form h3 {
+        font-size: 1.7rem;
+    }
+
+    .form h4 {
         font-size: 1.6rem;
+    }
+
+    .form h5 {
+        font-size: 1.6rem;
+    }
+
+    .formWrapper {
+        width: 90%;
+    }
+
+    .slider {
+        width: 90%
+    }
+
+    .ratingsText {
+        width: 95%;
     }
 }
 
 @media (max-width: 470px) {
     .titleContainer h1 {
+        font-size: 3.3rem;
+    }
+
+    .currentFriendsContainerTitle {
         font-size: 3.3rem;
     }
     
@@ -436,6 +565,31 @@ main {
     .tutorial {
         width: 85%;
     }
+
+    .friendName {
+        width: 60%;
+    }
+
+    .slider {
+        width: 95%
+    }
+
+    .formWrapper {
+        width: 95%;
+    }
+
+    .form h5 {
+        font-size: 1.5rem;
+    }
+
+    .form h2 {
+        font-size: 1.7rem;
+    }
+
+    .submit {
+        font-size: 1.8rem;
+        padding: 12px 30px;
+    }
 }
 
 
@@ -443,6 +597,11 @@ main {
     .titleContainer h1 {
         margin-top: 60px;
         font-size: 3.1rem;
+    }
+
+    .currentFriendsContainerTitle {
+        font-size: 3.1rem;
+        margin: 30px;
     }
     
     .titleContainer h2 {
@@ -461,10 +620,22 @@ main {
     .tutorial {
         width: 85%;
     }
+
+    .form h5 {
+        font-size: 1.35rem;
+    }
+
+    .friendName {
+        width: 65%;
+    }
 }
 
 @media (max-width: 400px) {
     .titleContainer h1 {
+        font-size: 3rem;
+    }
+
+    .currentFriendsContainerTitle {
         font-size: 3rem;
     }
     
@@ -495,10 +666,18 @@ main {
     .tutorial h3 {
         font-size: 1.3rem;
     }
+
+    .formWrapper {
+        width: 100%;
+    }
 }
 
 @media (max-width: 370px) {
     .titleContainer h1 {
+        font-size: 2.7rem;
+    }
+
+    .currentFriendsContainerTitle {
         font-size: 2.7rem;
     }
     
@@ -514,11 +693,19 @@ main {
         width: 140px;
         font-size: 1.2rem;
     }
+
+    .form h5 {
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 350px) {
     .titleContainer h1 {
         margin-top: 80px;
+        font-size: 2.6rem;
+    }
+
+    .currentFriendsContainerTitle {
         font-size: 2.6rem;
     }
     

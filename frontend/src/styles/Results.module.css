@@ -287,15 +287,19 @@ main {
     justify-content: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .tutorial {
-        width: 45%;
+        width: 50%;
+    }
+    .mainResults {
+        width: 90%;
+        margin: auto;
     }
 }
 
-@media (max-width: 1100px) {
-    .tutorial {
-        width: 50%;
+@media (max-width: 1200px) {
+    .traitsBreakdown {
+        width: 85%;
     }
 }
 
@@ -348,6 +352,18 @@ main {
 
     .image {
         width: 140px;
+    }
+
+    .traitsBreakdown {
+        width: 86%;
+    }
+
+    .traitsBreakdown p {
+        font-size: 1.7rem;
+    }
+
+    .traitsBreakdown h2 {
+        font-size: 2.7rem;
     }
 }
 
@@ -402,6 +418,18 @@ main {
     .tutorial {
         width: 80%;
     }
+
+    .traitsBreakdown {
+        width: 87%;
+    }
+
+    .traitsBreakdown p {
+        font-size: 1.5rem;
+    }
+
+    .traitsBreakdown h2 {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 500px) {
@@ -429,6 +457,18 @@ main {
     .tutorial h2 {
         font-size: 1.6rem;
     }
+
+    .traitsBreakdown {
+        width: 89%;
+    }
+
+    .traitsBreakdown p {
+        font-size: 1.4rem;
+    }
+
+    .traitsBreakdown h2 {
+        font-size: 2.3rem;
+    }
 }
 
 @media (max-width: 470px) {
@@ -451,6 +491,10 @@ main {
 
     .tutorial {
         width: 85%;
+    }
+
+    .traitsBreakdown h2 {
+        font-size: 2.15rem;
     }
 }
 
@@ -476,6 +520,18 @@ main {
 
     .tutorial {
         width: 85%;
+    }
+
+    .traitsBreakdown {
+        width: 93%;
+    }
+
+    .traitsBreakdown p {
+        font-size: 1.4rem;
+    }
+
+    .traitsBreakdown h2 {
+        font-size: 2.1rem;
     }
 }
 
@@ -511,6 +567,18 @@ main {
     .tutorial h3 {
         font-size: 1.3rem;
     }
+
+    .traitsBreakdown {
+        width: 95%;
+    }
+
+    .traitsBreakdown p {
+        font-size: 1.4rem;
+    }
+
+    .traitsBreakdown h2 {
+        font-size: 1.9rem;
+    }
 }
 
 @media (max-width: 370px) {
@@ -529,6 +597,18 @@ main {
     .startQuizzes button {
         width: 140px;
         font-size: 1.2rem;
+    }
+
+    .traitsBreakdown {
+        width: 95%;
+    }
+
+    .traitsBreakdown p {
+        font-size: 1.4rem;
+    }
+
+    .traitsBreakdown h2 {
+        font-size: 1.75rem;
     }
 }
 
@@ -557,5 +637,9 @@ main {
 
     .tutorial h3 {
         margin: 15px;
+    }
+
+    .traitsBreakdown h2 {
+        font-size: 1.55rem;
     }
 }
