@@ -1,0 +1,12 @@
+# Allow all crawlers access to everything
+User-agent: *
+Disallow:
+
+# Block specific directories
+# Disallow: /node_modules
+
+# Allow specific pages or directories
+# Allow: /dist
+
+# Sitemap location
+Sitemap: https://yourwebsite.com/sitemap.xml

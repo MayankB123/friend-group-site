@@ -1,0 +1,28 @@
+function validateRequestBody(req, res, next) {
+    const data = req.body;
+
+    if (!Array.isArray(data)) {
+        return res.status(400).json({ error: 'Request body must be an array of friends' });
+    }
+
+    if (data.length > 8) {
+        return res.status(400).json({ error: 'You can only include up to 8 friends' });
+    }
+
+    for (const friend of data) {
+        if (
+            typeof friend.name !== 'string' ||
+            typeof friend.attribute1 !== 'number' ||
+            typeof friend.attribute2 !== 'number' ||
+            typeof friend.attribute3 !== 'number' ||
+            typeof friend.attribute4 !== 'number' ||
+            typeof friend.attribute5 !== 'number'
+        ) {
+            return res.status(400).json({ error: 'Invalid friend data format' });
+        }
+    }
+
+    next();
+}
+
+module.exports = { validateRequestBody };

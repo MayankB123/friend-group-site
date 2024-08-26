@@ -84,17 +84,17 @@ export default function FriendForm({ addFriend, handleError }) {
             <h4>How comfortable are you in social gatherings?</h4>
             <div className={ styles.ratingsText }>
                 <h5>Uncomfortable</h5>
-                <h5>Very Comfortable</h5>
+                <h5>Very comfortable</h5>
             </div>
             <SliderController attribute={ friend.attribute2 } handleAttributeChange={ handleAttribute2Change }/>
             <h3>Dealing with conflict.</h3>
-            <h4>How combative are you?</h4>
+            <h4>How directly do you approach conflict?</h4>
             <div className={ styles.ratingsText }>
-                <h5>Avoid conflict</h5>
+                <h5>Avoid confrontation</h5>
                 <h5>Confront directly</h5>
             </div>
             <SliderController attribute={ friend.attribute3 } handleAttributeChange={ handleAttribute3Change }/>
-            <h3>Decison making.</h3>
+            <h3>Decision making.</h3>
             <h4>How deeply do you analyze decisions?</h4>
             <div className={ styles.ratingsText }>
                 <h5>Not at all</h5>

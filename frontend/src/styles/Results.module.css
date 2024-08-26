@@ -1,0 +1,561 @@
+* {
+    font-family: "Exo 2", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: var(--main-theme);
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.mainResults {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: black;
+    border: 1px solid #FDFFC2;
+    border-radius: 30px;
+    background-color: var(--form-color);
+    white-space: pre-wrap;
+}
+
+.mainResults h1 {
+    font-weight: 500;
+    font-size: 5rem;
+    margin: 30px;
+}
+
+.mainResults h2 {
+    font-weight: 400;
+    font-size: 3rem;
+    margin: 10px 0px 0px 0px;
+}
+
+.mainResults h3 {
+    font-weight: 400;
+    font-size: 2.4rem;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.mainResults h4 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin: 10px 0 0 0;
+}
+
+.mainResults h5 {
+    font-weight: 300;
+    font-size: 1.7rem;
+    margin: 15px 0 0 0;
+}
+
+.traitsBreakdown {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.traitsBreakdown p {
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin: 10px 0 0 0;
+}
+
+.traitsBreakdown h2 {
+    font-weight: 400;
+    font-size: 3rem;
+    margin: 40px 0px 0px 0px;
+}
+
+.ratingsText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.mainResultsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.image {
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.friendName {
+    font-size: 1.6rem;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin: 10px;
+    width: 35%; 
+    box-sizing: border-box; 
+    text-align: center;
+  }
+  
+.friendName::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.error {
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 2rem;
+    color: white;
+    background-color: var(--error);
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
+
+.currentFriend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 0px;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--form-color);
+    color: black;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.currentFriendsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.currentFriend h1 {
+    font-size: 2.4rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.currentFriend h2 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin: 10px;
+}
+
+.deleteFriend {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    border-radius: 12px;
+}
+
+.titleContainer {
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.titleContainer h1 {
+    font-size: 5rem;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.titleContainer h2 {
+    font-size: 2.5rem;
+    margin: 30px auto;
+    font-weight: 300;
+    width: 50%;
+}
+
+.submit {
+    margin-top: 20px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 2rem;
+    background-color: var(--main-theme);
+    color: white;
+}
+
+.submit:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.submit:active {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.getResultsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.backToHome {
+    margin: 0 auto;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 2rem;
+    background-color: var(--main-theme);
+    color: white;
+    margin-top: 40px;
+}
+
+.backToHome:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.backToHome:active {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.tutorial {
+    margin: 50px auto;
+    text-align: center;
+    width: 40%;
+    color: black;
+    border: 1px solid #FDFFC2;
+    border-radius: 30px;
+    background-color: var(--form-color);
+}
+
+.tutorial h1 {
+    margin: 10px 0px;
+}
+
+.tutorial h2 {
+    margin: 15px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.tutorial h3 {
+    margin: 25px;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.slider {
+    height: 50px;
+    width: 70%;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.sliderValue {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+.charactersContainer {
+    margin: 40px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .tutorial {
+        width: 45%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .tutorial {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .titleContainer h2 {
+        width: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+    .tutorial {
+        width: 70%;
+    }
+    
+    .startQuizzes {
+        width: 65%;
+    }
+}
+
+@media (max-width: 800px) {
+    .tutorial {
+        width: 70%;
+    }
+    
+    .startQuizzes {
+        width: 75%;
+    }
+
+    .image {
+        width: 160px;
+    }
+}
+
+@media (max-width: 700px) {
+    .tutorial {
+        width: 75%;
+    }
+    
+    .startQuizzes {
+        width: 80%;
+    }
+
+    .titleContainer h1 {
+        font-size: 4.5rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 2.3rem;
+    }
+
+    .image {
+        width: 140px;
+    }
+}
+
+@media (max-width: 650px) {
+    .startQuizzes button {
+        font-size: 1.8rem;
+        padding: 18px;
+        width: 200px;
+    }
+
+    .titleContainer h2 {
+        font-size: 2rem;
+    }
+
+    .tutorial h1 {
+        font-size: 2.2rem;
+    }
+
+    .tutorial h2 {
+        font-size: 1.8rem;
+    }
+
+    .tutorial h3 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .titleContainer h1 {
+        font-size: 4rem;
+    }
+
+    .image {
+        width: 130px;
+    }
+}
+
+@media (max-width: 550px) {
+    .titleContainer h1 {
+        font-size: 3.8rem;
+    }
+
+    .image {
+        width: 120px;
+    }
+
+    .startQuizzes button {
+        width: 180px;
+        font-size: 1.6rem;
+    }
+
+    .tutorial {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .sliderValue {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        width: 115px;
+    }
+
+    .titleContainer h2 {
+        width: 85%;
+    }
+
+    .startQuizzes button {
+        width: 160px;
+        font-size: 1.5rem;
+    }
+
+    .tutorial h1 {
+        font-size: 1.9rem;
+    }
+
+    .tutorial h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 470px) {
+    .titleContainer h1 {
+        font-size: 3.3rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 1.7rem;
+    }
+
+    .image {
+        width: 105px;
+    }
+
+    .startQuizzes button {
+        width: 160px;
+        font-size: 1.5rem;
+    }
+
+    .tutorial {
+        width: 85%;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .titleContainer h1 {
+        margin-top: 60px;
+        font-size: 3.1rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 1.6rem;
+    }
+
+    .image {
+        width: 95px;
+    }
+
+    .startQuizzes button {
+        width: 150px;
+        font-size: 1.35rem;
+    }
+
+    .tutorial {
+        width: 85%;
+    }
+}
+
+@media (max-width: 400px) {
+    .titleContainer h1 {
+        font-size: 3rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 1.6rem;
+    }
+
+    .image {
+        width: 90px;
+    }
+    
+    .startQuizzes {
+        width: 85%;
+    }
+
+    .tutorial {
+        width: 90%;
+    }
+
+    .tutorial h1 {
+        font-size: 1.8rem;
+    }
+
+    .tutorial h2 {
+        font-size: 1.4rem;
+    }
+
+    .tutorial h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 370px) {
+    .titleContainer h1 {
+        font-size: 2.7rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        width: 85px;
+    }
+
+    .startQuizzes button {
+        width: 140px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .titleContainer h1 {
+        margin-top: 80px;
+        font-size: 2.6rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 1.5rem;
+    }
+
+    .image {
+        width: 80px;
+    }
+
+    .startQuizzes {
+        width: 92%;
+    }
+
+    .startQuizzes button {
+        width: 140px;
+        font-size: 1.2rem;
+    }
+
+    .tutorial h3 {
+        margin: 15px;
+    }
+}

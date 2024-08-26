@@ -3,10 +3,12 @@ import CurrentFriend from './CurrentFriend'
 import CompatibilityTitles from './CompatibilityTitles'
 import FriendForm from './FriendForm'
 import styles from '../../styles/CompatibilityTest.module.css'
+import { useNavigate } from 'react-router-dom'
 
 export default function CompatibilityTest() {
   const [friends, setFriends] = useState([])
   const [error, setError] = useState()
+  const navigate = useNavigate()
 
   function addFriend(newFriend) {
     if (friends.length >= 8) {
@@ -27,9 +29,26 @@ export default function CompatibilityTest() {
     })
   }
 
-  function handleSubmit() {
-    console.log(friends)
-  }
+  async function handleSubmit(e) {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:3000/api/group-compatibility', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(friends),
+      });
+
+      if (!response.ok) {
+        handleError('Something went wrong. Please try again later.')
+      }
+
+      const data = await response.json();
+      navigate('/results', { state: data });
+    } catch (error) {
+      handleError('Something went wrong. Please try again later.')
+      console.error('Error submitting form:', error);
+    }
+  };
 
   function deleteFriend(id) {
     setFriends(currentFriends => {
@@ -60,7 +79,7 @@ export default function CompatibilityTest() {
       </section>
       {friends.length >= 2 && (
         <div className={ styles.getResultsWrapper }>
-          <button type="submit" className={ styles.getResults } onClick={handleSubmit}>Get your results!</button>
+          <button type="submit" className={ styles.getResults } onClick={e => handleSubmit(e)}>Get your results!</button>
         </div>
       )}
       {error && (
