@@ -32,7 +32,7 @@ export default function CompatibilityTest() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/group-compatibility', {
+      const response = await fetch('https://friend-group-site-backend.vercel.app/api/group-compatibility', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(friends),
