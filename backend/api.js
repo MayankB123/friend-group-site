@@ -159,6 +159,8 @@ router.post('/group-compatibility', rateLimiter, validateRequestBody, (req, res)
         text: text
     }
 
+    console.log(result)
+
     res.json(result);
 });
 
